@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:20' }
+    }
     stages {
         stage('Instalar dependencias') {
             steps {
@@ -23,3 +25,6 @@ pipeline {
         }
     }
 }
+
+// admin
+// password: a4efc28ed0714149b4b530e06fdbb2f9
